@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
 @layer base {
   body {
     @apply font-[Dosis];
@@ -21,4 +24,33 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+/*=============== SLIDER DOTS AND ARROWS ===============*/
+.slick-dots li button:before {
+  color: #374151; /* Colore dei puntini in modalità chiara */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #000000; /* Colore del puntino attivo in modalità chiara */
+}
+
+/* Modalità scura */
+.dark .slick-dots li button:before {
+  color: #d1d5db; /* Colore dei puntini in modalità scura */
+}
+
+.dark .slick-dots li.slick-active button:before {
+  color: #ffffff; /* Colore del puntino attivo in modalità scura */
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: #000000; /* Colore per la modalità chiara */
+}
+
+/* Stili per la modalità scura */
+.dark .slick-prev::before,
+.dark .slick-next::before {
+  color: #ffffff; /* Colore per la modalità scura */
 }

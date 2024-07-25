@@ -1,19 +1,33 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-function ProjectItem({ img, title, languages, link }) {
+function ProjectItem({ img, title, languages, linkApp, linkRepo }) {
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-lg shadow-[#ffbb00]/50 rounded-xl group hover:bg-gradient-to-r from-gray-200 to-[#ffbb00]">
-      <img src={img} alt={title} className="rounded-xl group-hover:opacity-10 duration-300 opacity-70" />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-        <h3 className="text-lg text-[#000051] font-bold tracking-wider text-center whitespace-nowrap">{title}</h3>
-        <p className="text-[#000051] font-medium text-center">{languages.join(', ')}</p>
-        <a href={link} target="_blank" rel="noreferrer" className="flex justify-center">
-          <button className="mt-2 text-center px-5 py-1 rounded-lg border-2 border-[#000051] text-gray-700 font-bold cursor-pointer text-lg hover:bg-[#000051] hover:text-[#ffbb00]">
-            Visit
-          </button>
-        </a>
+    <motion.div className="md:max-w-md rounded-2xl overflow-hidden bg-white dark:bg-[#000051] border-4 border-[#000051] dark:border-white hover:border-green-500 dark:hover:border-green-500 transition-all duration-300">
+      <img className="w-full h-48 object-cover" src={img} alt={title} />
+      <div className="px-6 py-4">
+        <div className="text-lg lg:text-xl font-semibold text-black dark:text-gray-200 mb-2">{title}</div>
+        <p className="text-gray-4700 dark:text-gray-400 text-base">{languages.join(', ')}</p>
+        <div className="flex gap-4">
+          <a
+            href={linkApp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-block bg-[#000051] dark:bg-white hover:bg-blue-700 dark:hover:bg-blue-700 text-white dark:text-[#000051] dark:hover:text-white font-bold py-2 px-4 rounded mt-4 transition-all duration-300 text-center"
+          >
+            Visita sito
+          </a>
+          <a
+            href={linkRepo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 inline-block bg-[#000051] dark:bg-white hover:bg-blue-700 dark:hover:bg-blue-700 text-white dark:text-[#000051] dark:hover:text-white font-bold py-2 px-4 rounded mt-4 transition-all duration-300 text-center"
+          >
+            Vedi codice
+          </a>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
