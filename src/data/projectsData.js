@@ -6,35 +6,35 @@ import NewPortfolioImg from '../assets/project5.PNG';
 
 const projects = [
   {
-    title: 'Portfolio',
+    title: 'titleProject1',
     languages: ['React', 'Tailwind'],
     image: NewPortfolioImg,
     linkApp: 'https://aireco.netlify.app/',
     linkRepo: 'https://github.com/Lorycaste98/portfolio',
   },
   {
-    title: 'AirEco App',
+    title: 'titleProject2',
     languages: ['React', 'Tailwind'],
     image: AirEcoImg,
     linkApp: 'https://aireco.netlify.app/',
     linkRepo: 'https://github.com/Lorycaste98/AirEco-App',
   },
   {
-    title: 'Veggie Recipes App',
+    title: 'titleProject3',
     languages: ['React', 'Tailwind'],
     image: VeggieRecipesImg,
     linkApp: 'https://vegetaflavors.netlify.app/',
     linkRepo: 'https://github.com/Lorycaste98/Vegetarian-App-React',
   },
   {
-    title: 'Counter App',
+    title: 'titleProject4',
     languages: ['HTML', 'CSS', 'Javascript'],
     image: CounterImg,
     linkApp: 'https://lorycaste98.github.io/progetto-html-css/',
     linkRepo: 'https://github.com/Lorycaste98/counter-app',
   },
   {
-    title: 'First Portfolio',
+    title: 'titleProject5',
     languages: ['HTML', 'CSS'],
     image: PortfolioImg,
     linkApp: 'https://lorycaste98.github.io/progetto-html-css/',

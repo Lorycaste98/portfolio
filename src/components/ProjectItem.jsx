@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function ProjectItem({ img, title, languages, linkApp, linkRepo }) {
+  const { t } = useTranslation('projects');
+
   return (
     <motion.div className="md:max-w-md rounded-2xl overflow-hidden bg-white dark:bg-[#000051] border-4 border-[#000051] dark:border-white hover:border-green-500 dark:hover:border-green-500 transition-all duration-300">
       <img className="w-full h-48 object-cover" src={img} alt={title} />
@@ -15,7 +18,7 @@ function ProjectItem({ img, title, languages, linkApp, linkRepo }) {
             rel="noopener noreferrer"
             className="flex-1 inline-block bg-[#000051] dark:bg-white hover:bg-blue-700 dark:hover:bg-blue-700 text-white dark:text-[#000051] dark:hover:text-white font-bold py-2 px-4 rounded mt-4 transition-all duration-300 text-center"
           >
-            Visita sito
+            {t('visiteButton')}
           </a>
           <a
             href={linkRepo}
@@ -23,7 +26,7 @@ function ProjectItem({ img, title, languages, linkApp, linkRepo }) {
             rel="noopener noreferrer"
             className="flex-1 inline-block bg-[#000051] dark:bg-white hover:bg-blue-700 dark:hover:bg-blue-700 text-white dark:text-[#000051] dark:hover:text-white font-bold py-2 px-4 rounded mt-4 transition-all duration-300 text-center"
           >
-            Vedi codice
+            {t('codeButton')}
           </a>
         </div>
       </div>

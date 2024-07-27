@@ -1,0 +1,16 @@
+{
+  "title": "Contacts",
+  "subtitle": "Let's stay in touch",
+  "firstName": "First name",
+  "placeholderFirstName": "Write your first name",
+  "lastName": "Last name",
+  "placeholderLastName": "Write your last name",
+  "email": "Email",
+  "placeholderEmail": "Write your email",
+  "phone": "Phone",
+  "placeholderPhone": "Write your phone number",
+  "message": "Message",
+  "placeholderMessage": "Write your message",
+  "send": "Send message",
+  "error": "This field is required!"
+}

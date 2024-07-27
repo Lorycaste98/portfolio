@@ -1,0 +1,16 @@
+{
+  "title": "Contatti",
+  "subtitle": "Rimaniamo in contatto",
+  "firstName": "Nome",
+  "placeholderFirstName": "Inserisci il tuo nome",
+  "lastName": "Cognome",
+  "placeholderLastName": "Inserisci il tuo cognome",
+  "email": "Email",
+  "placeholderEmail": "Inserisci la tua email",
+  "phone": "Telefono",
+  "placeholderPhone": "Inserisci il tuo numero di telefono",
+  "message": "Messaggio",
+  "placeholderMessage": "Inserisci il tuo messaggio",
+  "send": "Invia messaggio",
+  "error": "Questo campo è obbligatorio!"
+}

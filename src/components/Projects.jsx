@@ -3,8 +3,11 @@ import ProjectItem from './ProjectItem';
 import projects from '../data/projectsData';
 import { RevealYUp, RevealYDown } from './Reveals';
 import Slider from 'react-slick';
+import { useTranslation } from 'react-i18next';
 
 function Projects() {
+  const { t } = useTranslation('projects');
+
   // Configurazione del carosello
   const settings = {
     dots: true,
@@ -37,10 +40,10 @@ function Projects() {
         <div className="max-w-[1100px] w-full">
           <RevealYUp>
             <div className="md:text-center pb-8">
-              <h2 className="text-4xl lg:text-6xl text-[#000051] dark:text-gray-100 font-bold inline border-b-4 border-[#ffbb00]">
-                PROGETTI
+              <h2 className="text-4xl lg:text-6xl text-[#000051] dark:text-gray-100 font-bold inline border-b-4 border-[#ffbb00] uppercase">
+                {t('title')}
               </h2>
-              <p className="mt-4 lg:text-xl text-gray-400">I miei progetti più recenti</p>
+              <p className="mt-4 lg:text-xl text-gray-400">{t('subtitle')}</p>
             </div>
           </RevealYUp>
           <RevealYDown>
@@ -50,7 +53,7 @@ function Projects() {
                   <div key={index} className="px-4">
                     <ProjectItem
                       img={project.image}
-                      title={project.title}
+                      title={t(project.title)}
                       languages={project.languages}
                       linkApp={project.linkApp}
                       linkRepo={project.linkRepo}

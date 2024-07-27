@@ -1,10 +1,10 @@
 const homeSectionsData = [
-  { name: 'Home', to: 'home' },
-  { name: 'La mia storia', to: 'about' },
-  { name: 'Abilità', to: 'skills' },
-  { name: 'Progetti', to: 'projects' },
-  { name: 'Esperienze', to: 'work' },
-  { name: 'Contatti', to: 'contact' },
+  { name: 'home', to: 'home' },
+  { name: 'about', to: 'about' },
+  { name: 'works', to: 'work' },
+  { name: 'projects', to: 'projects' },
+  { name: 'skills', to: 'skills' },
+  { name: 'contact', to: 'contact' },
 ];
 
 export default homeSectionsData;

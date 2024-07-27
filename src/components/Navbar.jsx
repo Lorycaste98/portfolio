@@ -1,20 +1,26 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-scroll';
-import Logo from '../assets/logo.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { motion, useMotionValueEvent, useScroll, useSpring } from 'framer-motion';
 import socialData from '../data/socialData';
 import DarkModeButton from './DarkModeButton';
 import DarkModeContext from '../stores/DarkModeContext';
 import { GoMoon, GoSun } from 'react-icons/go';
 import homeSectionsData from '../data/homeSectionsData';
+import LanguageSwitchButton from './LanguageSwitchButton';
+import { useTranslation } from 'react-i18next';
+import LogoLight from '../assets/logo-blue.png';
+import LogoNight from '../assets/logo-white.png';
+import LogoScrittaLight from '../assets/logo-scritta-blue.png';
+import LogoScrittaNight from '../assets/logo-scritta-white.png';
 
 function Navbar() {
   const [nav, setNav] = useState(false);
   const [hidden, setHidden] = useState(false);
   const { scrollY, scrollYProgress } = useScroll();
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+
+  const { t } = useTranslation('common');
 
   const handleClick = () => {
     setNav(!nav);
@@ -36,7 +42,12 @@ function Navbar() {
 
   return (
     <header className={`${darkMode ? 'dark' : ''} fixed w-full top-0 z-[1000]`}>
-      <DarkModeButton onClick={toggleDarkMode}>{darkMode ? <GoSun size={25} /> : <GoMoon size={25} />}</DarkModeButton>
+      <div className="hidden lg:flex items-center gap-4">
+        <LanguageSwitchButton />
+        <DarkModeButton onClick={toggleDarkMode}>
+          {darkMode ? <GoSun size={25} /> : <GoMoon size={25} />}
+        </DarkModeButton>
+      </div>
 
       <motion.div
         style={{
@@ -60,15 +71,22 @@ function Navbar() {
         className={`bg-slate-100 dark:bg-blue-950 z-[998] transition-colors duration-500`}
       >
         <div className="flex justify-between items-center px-8 md:mx-auto h-28 ">
-          <div>
-            <Link to="home" smooth={true} duration={150}>
-              <img src={Logo} alt="Logo" className="w-24 cursor-pointer" />
+          <div className="flex items-end">
+            <Link to="home" smooth={true} duration={150} className="flex items-end">
+              <img src={darkMode ? LogoNight : LogoLight} alt="Logo" className="w-28 cursor-pointer lg:ml-16" />
+              <div className="ml-2">
+                <img
+                  src={darkMode ? LogoScrittaNight : LogoScrittaLight}
+                  alt="Logo scritta"
+                  className="hidden xl:block w-52 mb-5"
+                />
+              </div>
             </Link>
           </div>
 
           {/* Menu */}
 
-          <div className="hidden md:flex gap-8 text-2xl font-medium cursor-pointer ">
+          <div className="hidden lg:flex gap-8 text-2xl font-medium cursor-pointer ">
             {homeSectionsData.map((section, index) => (
               <Link
                 key={index}
@@ -77,12 +95,12 @@ function Navbar() {
                 duration={150}
                 className="text-[#000051] dark:text-white no-transition"
               >
-                {section.name}
+                {t(section.name)}
               </Link>
             ))}
           </div>
 
-          <div className="md:hidden cursor-pointer text-gray-500" onClick={handleClick}>
+          <div className="lg:hidden cursor-pointer text-gray-500" onClick={handleClick}>
             <FaBars size={30} />
           </div>
         </div>
@@ -93,7 +111,7 @@ function Navbar() {
         initial={{ x: '-100%' }}
         animate={{ x: nav ? 0 : '-100%' }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
-        className="fixed top-0 left-0 w-full h-full bg-slate-300 dark:bg-[#000051] flex flex-col items-center justify-center z-[999] p-4"
+        className="fixed top-0 left-0 w-full h-full bg-slate-300 dark:bg-[#000051] flex flex-col items-center justify-center z-[1002] p-4"
       >
         <button className="absolute top-10 right-8 text-3xl text-gray-500" onClick={handleClick}>
           <FaTimes />
@@ -106,51 +124,33 @@ function Navbar() {
               smooth={true}
               duration={150}
               onClick={handleClick}
-              className="w-full text-center"
+              className="w-full text-center cursor-pointer"
             >
-              {section.name}
+              {t(section.name)}
             </Link>
           ))}
         </ul>
         <div className="flex justify-center items-center mt-12 gap-8">
           {socialData.map((social, index) => (
-            <a key={index} className="text-gray-500" href={social.url} target="_blank" rel="noreferrer">
-              {social.icon}
+            <a
+              key={index}
+              className="relative group flex items-center justify-center text-gray-500 transition-all duration-300 hover:text-stone-800"
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>{social.icon}</div>
+              <div className="absolute top-7 right-1/2 transform translate-x-1/2 bg-black dark:bg-white text-white dark:text-slate-800 text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {social.name}
+              </div>
             </a>
           ))}
         </div>
+        <LanguageSwitchButton />
+        <DarkModeButton onClick={toggleDarkMode}>
+          {darkMode ? <GoSun size={25} /> : <GoMoon size={25} />}
+        </DarkModeButton>
       </motion.div>
-
-      {/* Social Icons PC */}
-      <div className="hidden md:flex fixed flex-col top-[35%] left-0 z-[210] overflow-x-hidden">
-        <ul>
-          {socialData.map((social, index) => (
-            <li
-              key={index}
-              className={`w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 transition-all duration-500 ${social.colors}`}
-            >
-              <a
-                className="flex justify-between items-center w-full text-white"
-                href={social.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {social.name} {social.icon}
-              </a>
-            </li>
-          ))}
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 transition-all duration-500 bg-[#0e76a8]">
-            <Link
-              className="flex justify-between items-center w-full text-white"
-              to="contact"
-              smooth={true}
-              duration={150}
-            >
-              Email <BsFillPersonLinesFill size={25} />
-            </Link>
-          </li>
-        </ul>
-      </div>
     </header>
   );
 }

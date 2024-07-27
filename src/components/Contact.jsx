@@ -1,8 +1,11 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { RevealYUp, RevealYDown } from './Reveals';
+import { useTranslation } from 'react-i18next';
 
 function Contact() {
+  const { t } = useTranslation('contact');
+
   const {
     register,
     handleSubmit,
@@ -22,10 +25,10 @@ function Contact() {
         <div className="max-w-[800px] w-full">
           <RevealYUp>
             <div className="md:text-center pb-8">
-              <h2 className="text-4xl lg:text-6xl text-[#000051] dark:text-gray-100 font-bold inline border-b-4 border-[#ffbb00]">
-                CONTATTI
+              <h2 className="text-4xl lg:text-6xl text-[#000051] dark:text-gray-100 font-bold inline border-b-4 border-[#ffbb00] uppercase">
+                {t('title')}
               </h2>
-              <p className="mt-4 lg:text-xl text-gray-400">Rimaniamo in contatto</p>
+              <p className="mt-4 lg:text-xl text-gray-400">{t('subtitle')}</p>
             </div>
           </RevealYUp>
           <div className="text-[#000051] dark:text-white mx-4">
@@ -37,15 +40,15 @@ function Contact() {
                       htmlFor="firstName"
                       className="uppercase absolute top-[-0.70rem] left-5 bg-stone-200 dark:bg-[#000051] px-2 rounded-xl"
                     >
-                      Nome
+                      {t('firstName')}
                     </label>
                     <input
                       type="text"
                       {...register('firstName', { required: true })}
                       className="border-2 rounded-lg p-3 flex border-[#000051] dark:border-white bg-stone-200 dark:bg-[#000051]"
-                      placeholder="Inserisci il tuo nome"
+                      placeholder={t('placeholderFirstName')}
                     />
-                    {errors.firstName && <span className="mt-1 text-red-500">Questo campo è obbligatorio!</span>}
+                    {errors.firstName && <span className="mt-1 text-red-500">{t('error')}</span>}
                   </div>
 
                   <div className="flex flex-col relative">
@@ -53,15 +56,15 @@ function Contact() {
                       htmlFor="lastName"
                       className="uppercase absolute top-[-0.70rem] left-5 bg-stone-200 dark:bg-[#000051] px-2 rounded-xl"
                     >
-                      Cognome
+                      {t('lastName')}
                     </label>
                     <input
                       type="text"
                       {...register('lastName', { required: true })}
                       className="border-2 rounded-lg p-3 flex border-[#000051] dark:border-white bg-stone-200 dark:bg-[#000051]"
-                      placeholder="Inserisci il tuo cognome"
+                      placeholder={t('placeholderLastName')}
                     />
-                    {errors.lastName && <span className="mt-1 text-red-500">Questo campo è obbligatorio!</span>}
+                    {errors.lastName && <span className="mt-1 text-red-500">{t('error')}</span>}
                   </div>
                 </div>
 
@@ -71,15 +74,15 @@ function Contact() {
                       htmlFor="email"
                       className="uppercase absolute top-[-0.70rem] left-5 bg-stone-200 dark:bg-[#000051] px-2 rounded-xl"
                     >
-                      Mail
+                      {t('email')}
                     </label>
                     <input
                       type="text"
                       {...register('email', { required: true })}
                       className="border-2 rounded-lg p-3 flex border-[#000051] dark:border-white bg-stone-200 dark:bg-[#000051]"
-                      placeholder="Inserisci la tua mail"
+                      placeholder={t('placeholderEmail')}
                     />
-                    {errors.email && <span className="mt-1 text-red-500">Questo campo è obbligatorio!</span>}
+                    {errors.email && <span className="mt-1 text-red-500">{t('error')}</span>}
                   </div>
 
                   <div className="flex flex-col relative">
@@ -87,15 +90,15 @@ function Contact() {
                       htmlFor="phone"
                       className="uppercase absolute top-[-0.70rem] left-5 bg-stone-200 dark:bg-[#000051] px-2 rounded-xl"
                     >
-                      Telefono
+                      {t('phone')}
                     </label>
                     <input
                       type="text"
                       {...register('phone', { required: true })}
                       className="border-2 rounded-lg p-3 flex border-[#000051] dark:border-white bg-stone-200 dark:bg-[#000051]"
-                      placeholder="Inserisci il numero di telefono"
+                      placeholder={t('placeholderPhone')}
                     />
-                    {errors.phone && <span className="mt-1 text-red-500">Questo campo è obbligatorio!</span>}
+                    {errors.phone && <span className="mt-1 text-red-500">{t('error')}</span>}
                   </div>
                 </div>
 
@@ -104,18 +107,21 @@ function Contact() {
                     htmlFor="message"
                     className="uppercase absolute top-[-0.70rem] left-5 bg-stone-200 dark:bg-[#000051] px-2 rounded-xl"
                   >
-                    Message
+                    {t('message')}
                   </label>
                   <textarea
                     {...register('message', { required: true })}
                     rows="6"
                     className="border-2 rounded-lg p-3 flex border-[#000051] dark:border-white bg-stone-200 dark:bg-[#000051]"
-                    placeholder="Scrivi il tuo messaggio"
+                    placeholder={t('placeholderMessage')}
                   ></textarea>
-                  {errors.message && <span className="mt-1 text-red-500">Questo campo è obbligatorio!</span>}
+                  {errors.message && <span className="mt-1 text-red-500">{t('error')}</span>}
                 </div>
-                <button type="submit" className="bg-[#ffbb00] text-[#000051] font-bold w-full p-3 rounded-lg">
-                  Send Message
+                <button
+                  type="submit"
+                  className="bg-[#ffbb00] text-[#000051] hover:bg-[#dba818] font-bold w-full p-3 rounded-lg active:scale-90 active:bg-[#b68f23] transition-all duration-300"
+                >
+                  {t('send')}
                 </button>
               </form>
             </RevealYDown>
