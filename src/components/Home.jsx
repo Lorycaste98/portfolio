@@ -32,7 +32,7 @@ function Home() {
           {/* Container */}
           <div className="max-w-[1240px] mx-auto px-5 md:px-16 flex flex-col md:flex-row justify-center items-center h-full gap-6">
             <div className="flex flex-col xl:flex-row gap-8 items-center">
-              <div className="relative w-80 h-80 overflow-hidden">
+              <div className="relative w-60 md:w-80 h-60 md:h-80 overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-full h-full rounded-full border-2 border-[#000051] overflow-hidden">
                     <Slider {...settings} className="w-full h-full">
