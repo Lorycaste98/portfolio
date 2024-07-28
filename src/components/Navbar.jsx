@@ -1,14 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-scroll';
-import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, useMotionValueEvent, useScroll, useSpring } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { GoMoon, GoSun } from 'react-icons/go';
+
 import socialData from '../data/socialData';
 import DarkModeButton from './DarkModeButton';
 import DarkModeContext from '../stores/DarkModeContext';
-import { GoMoon, GoSun } from 'react-icons/go';
 import homeSectionsData from '../data/homeSectionsData';
 import LanguageSwitchButton from './LanguageSwitchButton';
-import { useTranslation } from 'react-i18next';
+
 import LogoLight from '../assets/logo-blue.png';
 import LogoNight from '../assets/logo-white.png';
 import LogoScrittaLight from '../assets/logo-scritta-blue.png';
@@ -73,7 +76,7 @@ function Navbar() {
         <div className="flex justify-between items-center px-8 md:mx-auto h-28 ">
           <div className="flex items-end">
             <Link to="home" smooth={true} duration={150} className="flex items-end">
-              <img src={darkMode ? LogoNight : LogoLight} alt="Logo" className="w-28 cursor-pointer lg:ml-16" />
+              <img src={darkMode ? LogoNight : LogoLight} alt="Logo" className="w-20 md:w-28 cursor-pointer lg:ml-16" />
               <div className="ml-2">
                 <img
                   src={darkMode ? LogoScrittaNight : LogoScrittaLight}

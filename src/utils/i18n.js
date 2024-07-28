@@ -13,7 +13,7 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    ns: ['common'],
+    ns: ['common', 'home', 'about', 'work', 'projects', 'skills', 'contact'],
     defaultNS: 'common',
     interpolation: {
       escapeValue: false, // react already safes from xss

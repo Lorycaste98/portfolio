@@ -12,5 +12,7 @@
   "message": "Message",
   "placeholderMessage": "Write your message",
   "send": "Send message",
-  "error": "This field is required!"
+  "error": "This field is required!",
+  "invalidEmail": "Enter a valid email!",
+  "invalidPhone": "Enter a valid phone number!"
 }

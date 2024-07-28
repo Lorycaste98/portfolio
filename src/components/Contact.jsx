@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { RevealYUp, RevealYDown } from './Reveals';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const { t } = useTranslation('contact');
+  const form = useRef();
 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const sendEmail = () => {
+    emailjs.sendForm('service_rrwffo4', 'template_h6ym29s', form.current, 'BbLOH8Uh0FrFsiM4T').then(
+      () => {
+        console.log('SUCCESS!');
+        alert('Messaggio inviato con successo!');
+        reset(); // Resetta il form dopo l'invio
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+      }
+    );
+  };
+
+  const onSubmit = (data, e) => {
+    e.preventDefault();
+    sendEmail();
   };
 
   return (
@@ -33,7 +50,7 @@ function Contact() {
           </RevealYUp>
           <div className="text-[#000051] dark:text-white mx-4">
             <RevealYDown>
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                 <div className="grid md:grid-cols-2 gap-4 w-full my-6">
                   <div className="flex flex-col relative">
                     <label
@@ -77,12 +94,18 @@ function Contact() {
                       {t('email')}
                     </label>
                     <input
-                      type="text"
-                      {...register('email', { required: true })}
+                      type="email"
+                      {...register('email', {
+                        required: t('error'),
+                        pattern: {
+                          value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                          message: t('invalidEmail'),
+                        },
+                      })}
                       className="border-2 rounded-lg p-3 flex border-[#000051] dark:border-white bg-stone-200 dark:bg-[#000051]"
                       placeholder={t('placeholderEmail')}
                     />
-                    {errors.email && <span className="mt-1 text-red-500">{t('error')}</span>}
+                    {errors.email && <span className="mt-1 text-red-500">{errors.email.message}</span>}
                   </div>
 
                   <div className="flex flex-col relative">
@@ -93,12 +116,18 @@ function Contact() {
                       {t('phone')}
                     </label>
                     <input
-                      type="text"
-                      {...register('phone', { required: true })}
+                      type="tel"
+                      {...register('phone', {
+                        required: t('error'),
+                        pattern: {
+                          value: /^[0-9]+$/,
+                          message: t('invalidPhone'),
+                        },
+                      })}
                       className="border-2 rounded-lg p-3 flex border-[#000051] dark:border-white bg-stone-200 dark:bg-[#000051]"
                       placeholder={t('placeholderPhone')}
                     />
-                    {errors.phone && <span className="mt-1 text-red-500">{t('error')}</span>}
+                    {errors.phone && <span className="mt-1 text-red-500">{errors.phone.message}</span>}
                   </div>
                 </div>
 

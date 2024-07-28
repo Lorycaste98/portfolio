@@ -1,0 +1,33 @@
+{
+  "name": "Lorenzo Castelletti Portfolio",
+  "short_name": "LC Portfolio",
+  "description": "Un app portfolio che mostra le mie esperienze lavorative, formative e i miei progetti.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#e7e5e4",
+  "theme_color": "#000051",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/logo-blue.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-white.png",
+      "sizes": "500x500",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-scritta-blue.png",
+      "sizes": "1563x355",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/logo-scritta-white.png",
+      "sizes": "1563x355",
+      "type": "image/png"
+    }
+  ],
+  "lang": "it-IT"
+}
