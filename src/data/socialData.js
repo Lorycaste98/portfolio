@@ -13,12 +13,12 @@ const socialData = [
     icon: <FaInstagram size={25} />,
     colors: 'bg-gradient-to-r from-[#fcaf45] to-[#c13584]',
   },
-  {
-    name: 'Spotify',
-    url: 'https://open.spotify.com/user/21recw65jk3fvspadgve6ciui',
-    icon: <FaSpotify size={25} />,
-    colors: 'bg-[#1DB954]',
-  },
+  // {
+  //   name: 'Spotify',
+  //   url: 'https://open.spotify.com/user/21recw65jk3fvspadgve6ciui',
+  //   icon: <FaSpotify size={25} />,
+  //   colors: 'bg-[#1DB954]',
+  // },
   {
     name: 'GitHub',
     url: 'https://github.com/Lorycaste98',

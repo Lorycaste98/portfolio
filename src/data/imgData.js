@@ -1,7 +1,7 @@
-import imgProfile1 from '../assets/profile-photo1.jpg';
-import imgProfile2 from '../assets/profile-photo2.jpg';
-import imgProfile3 from '../assets/profile-photo3.jpg';
-import imgProfile4 from '../assets/profile-photo4.jpg';
+import imgProfile1 from '../assets/profile-photo1.webp';
+import imgProfile2 from '../assets/profile-photo2.webp';
+import imgProfile3 from '../assets/profile-photo3.webp';
+import imgProfile4 from '../assets/profile-photo4.webp';
 
 const imgData = [
   { name: 'imgProfile1', src: imgProfile1 },

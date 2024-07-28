@@ -9,7 +9,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="w-full h-auto md:h-screen bg-white dark:bg-blue-900 py-20 transition-colors duration-500"
+      className="w-full h-auto md:min-h-screen bg-white dark:bg-blue-900 py-20 transition-colors duration-500"
     >
       <div className="flex flex-col justify-center items-center w-full h-full px-5 md:px-16">
         <div className="max-w-[1100px] w-full">

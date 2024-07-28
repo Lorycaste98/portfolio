@@ -6,7 +6,6 @@ import imgData from '../data/imgData';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 import socialData from '../data/socialData';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 
 function Home() {
   const { t } = useTranslation('home');
@@ -27,7 +26,7 @@ function Home() {
       <RevealHome>
         <section
           id="home"
-          className="relative bg-gradient-to-br dark:bg-gradient-to-br from-slate-100 dark:from-[#000051] via-cyan-300 dark:via-[#6d6dde] to-lime-400 dark:to-[#ffbb00] w-full h-auto xl:h-screen transition-all duration-500 pt-40 pb-20"
+          className="relative bg-gradient-to-br dark:bg-gradient-to-br from-slate-100 dark:from-[#000051] via-cyan-300 dark:via-[#6d6dde] to-lime-400 dark:to-[#ffbb00] w-full h-auto md:min-h-screen transition-all duration-500 pt-40 pb-20 flex items-center"
         >
           {/* Container */}
           <div className="max-w-[1240px] mx-auto px-5 md:px-16 flex flex-col md:flex-row justify-center items-center h-full gap-6">
@@ -72,7 +71,7 @@ function Home() {
         </section>
       </RevealHome>
       {/* Social Icons PC */}
-      <div className="hidden md:flex absolute flex-col top-[35%] left-0 z-[210] overflow-x-hidden">
+      <div className="hidden md:flex absolute flex-col top-[40%] left-0 z-[210] overflow-x-hidden">
         <ul>
           {socialData.map((social, index) => (
             <li
@@ -89,16 +88,6 @@ function Home() {
               </a>
             </li>
           ))}
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-0 transition-all duration-500 bg-[#0e76a8]">
-            <Link
-              className="flex justify-between items-center w-full text-white"
-              to="contact"
-              smooth={true}
-              duration={150}
-            >
-              Email <BsFillPersonLinesFill size={25} />
-            </Link>
-          </li>
         </ul>
       </div>
     </div>

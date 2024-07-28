@@ -9,7 +9,7 @@ function Work() {
   return (
     <section
       id="work"
-      className="w-full h-auto bg-white dark:bg-blue-900 py-20 md:py-40 transition-colors duration-500"
+      className="w-full h-auto md:min-h-screen bg-white dark:bg-blue-900 py-20 md:py-40 transition-colors duration-500"
       y
     >
       <div className="flex flex-col justify-center items-center w-full h-full px-5 md:px-16">

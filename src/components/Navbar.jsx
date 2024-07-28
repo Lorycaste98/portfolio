@@ -12,10 +12,10 @@ import DarkModeContext from '../stores/DarkModeContext';
 import homeSectionsData from '../data/homeSectionsData';
 import LanguageSwitchButton from './LanguageSwitchButton';
 
-import LogoLight from '../assets/logo-blue.png';
-import LogoNight from '../assets/logo-white.png';
-import LogoScrittaLight from '../assets/logo-scritta-blue.png';
-import LogoScrittaNight from '../assets/logo-scritta-white.png';
+import LogoLight from '../assets/logo-blue.webp';
+import LogoNight from '../assets/logo-white.webp';
+import LogoScrittaLight from '../assets/logo-scritta-blue.webp';
+import LogoScrittaNight from '../assets/logo-scritta-white.webp';
 
 function Navbar() {
   const [nav, setNav] = useState(false);
