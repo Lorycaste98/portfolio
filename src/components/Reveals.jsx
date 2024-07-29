@@ -59,7 +59,7 @@ function RevealHome({ children }) {
 export function RevealYUp({ children }) {
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 1,
+    threshold: 0.5,
   });
 
   return (

@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const socialData = [
   {

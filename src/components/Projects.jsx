@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectItem from './ProjectItem';
+import ProjectItem from './Design/ProjectItem';
 import projects from '../data/projectsData';
 import { RevealYUp, RevealYDown } from './Reveals';
 import Slider from 'react-slick';
@@ -39,16 +39,18 @@ function Projects() {
       <div className="flex flex-col justify-center items-center w-full h-full px-5 md:px-16">
         <div className="max-w-[1100px] w-full">
           <RevealYUp>
-            <div className="md:text-center pb-8">
+            <header className="md:text-center pb-8">
               <h2 className="text-4xl lg:text-6xl text-[#000051] dark:text-gray-100 font-bold inline border-b-4 border-[#ffbb00] uppercase">
                 {t('title')}
               </h2>
-              <p className="mt-4 lg:text-xl text-gray-400">{t('subtitle')}</p>
-            </div>
+              <p className="mt-4 lg:text-xl text-gray-400" role="contentinfo">
+                {t('subtitle')}
+              </p>
+            </header>
           </RevealYUp>
           <RevealYDown>
             <div className="w-[70%] md:w-[85%] mx-auto">
-              <Slider {...settings}>
+              <Slider {...settings} aria-label={t('projectsSlider')}>
                 {projects.map((project, index) => (
                   <div key={index} className="px-4">
                     <ProjectItem
@@ -57,6 +59,7 @@ function Projects() {
                       languages={project.languages}
                       linkApp={project.linkApp}
                       linkRepo={project.linkRepo}
+                      aria-label={t(`${project.title} project`)}
                     />
                   </div>
                 ))}

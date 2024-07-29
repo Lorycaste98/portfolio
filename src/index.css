@@ -26,6 +26,11 @@
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 /*=============== SLIDER DOTS AND ARROWS ===============*/
 .slick-dots li button:before {
   color: #374151; /* Colore dei puntini in modalità chiara */

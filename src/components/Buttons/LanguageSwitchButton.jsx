@@ -20,8 +20,10 @@ function LanguageSwitchButton() {
   return (
     <button
       id="language-switch-button"
+      type="button"
       onClick={toggleLanguage}
       className="fixed w-14 h-14 bottom-20 lg:bottom-[152px] right-3 md:right-8 rounded-full bg-[#000051] dark:bg-white text-white dark:text-[#000051] flex justify-center items-center no-transition z-[200]"
+      aria-label={`Switch to ${i18n.language === 'it' ? 'English' : 'Italian'}`}
     >
       <FlagIcon code={getFlagCode()} size={24} />
     </button>

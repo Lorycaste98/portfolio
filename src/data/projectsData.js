@@ -1,8 +1,8 @@
-import VeggieRecipesImg from '../assets/project1.webp';
-import PortfolioImg from '../assets/project2.webp';
-import CounterImg from '../assets/project3.webp';
-import AirEcoImg from '../assets/project4.webp';
-import NewPortfolioImg from '../assets/project5.webp';
+import VeggieRecipesImg from '../assets/projects-images/project1.webp';
+import PortfolioImg from '../assets/projects-images/project2.webp';
+import CounterImg from '../assets/projects-images/project3.webp';
+import AirEcoImg from '../assets/projects-images/project4.webp';
+import NewPortfolioImg from '../assets/projects-images/project5.webp';
 
 const projects = [
   {
