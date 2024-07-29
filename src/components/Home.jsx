@@ -29,9 +29,9 @@ function Home() {
           className="relative bg-gradient-to-br dark:bg-gradient-to-br from-slate-100 dark:from-[#000051] via-cyan-300 dark:via-[#6d6dde] to-lime-400 dark:to-[#ffbb00] w-full h-auto md:min-h-screen transition-all duration-500 pt-40 pb-20 flex items-center"
         >
           {/* Main Container */}
-          <div className="max-w-[1240px] mx-auto px-5 md:px-16 flex flex-col md:flex-row justify-center items-center h-full gap-6">
+          <div className="max-w-[1240px] mx-auto px-5 md:px-16 flex flex-col xl:flex-row justify-center items-center h-full gap-6">
             {/* Image Slider Section */}
-            <figure className="relative w-60 md:w-80 h-60 md:h-80 overflow-hidden">
+            <figure className="relative w-56 h-56 xl:w-80 xl:h-80 overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-full h-full rounded-full border-2 border-[#000051] overflow-hidden">
                   <Slider {...settings} className="w-full h-full">
@@ -58,7 +58,7 @@ function Home() {
                 <p>{t('phrase4')}</p>
               </div>
               <Link to="contact" smooth={true} duration={150} className="transition-colors duration-500 ">
-                <button className="text-[#000051] dark:text-white dark:hover:text-[#000051] group border-2 border-[#000051] dark:border-white dark:hover:border-[#ffbb00] pl-6 pr-4 py-3 flex justify-center items-center lg:text-xl hover:bg-[#ffbb00] hover:border-[#ffbb00] hover:text-[#000051] active:scale-90 active:bg-[#b68f23] active:border-[#b68f23] duration-500 font-semibold rounded-2xl transition-all w-40 justify-center">
+                <button className="text-[#000051] dark:text-white dark:hover:text-[#000051] group border-2 border-[#000051] dark:border-white dark:hover:border-[#ffbb00] pl-6 pr-4 py-3 flex justify-center items-center lg:text-xl hover:bg-[#ffbb00] hover:border-[#ffbb00] hover:text-[#000051] active:scale-90 active:bg-[#b68f23] active:border-[#b68f23] duration-500 font-semibold rounded-2xl transition-all w-40">
                   {t('writeButton')}
                   <span>
                     <GrSend className="mx-2" />

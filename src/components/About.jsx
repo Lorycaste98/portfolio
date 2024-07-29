@@ -1,12 +1,16 @@
 import React from 'react';
-import CV from '../assets/CURRICULUM.pdf';
+import CvIta from '../assets/curriculum-ita.pdf';
+import CvEng from '../assets/curriculum-eng.pdf';
 import { GrDocumentDownload } from 'react-icons/gr';
 import { RevealYUp, RevealYDown } from './Reveals';
 import { FaLongArrowAltDown } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
 function About() {
-  const { t } = useTranslation('about');
+  const { t, i18n } = useTranslation('about');
+
+  // Determina quale curriculum scaricare in base alla lingua corrente
+  const CV = i18n.language === 'it' ? CvIta : CvEng;
 
   return (
     <section
