@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+// Funzione per ottenere le dimensioni della finestra
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -26,6 +27,7 @@ function useWindowSize() {
   return windowSize;
 }
 
+// Componente per rivelare gli elementi della Home quando sono visibili
 function RevealHome({ children }) {
   const size = useWindowSize();
   const threshold = size.width <= 768 ? 0.2 : 0.5; // Modifica la soglia in base alla larghezza dello schermo
@@ -56,6 +58,7 @@ function RevealHome({ children }) {
   );
 }
 
+// Componente per rivelare gli elementi con un'animazione dall'alto
 export function RevealYUp({ children }) {
   const { ref, inView } = useInView({
     triggerOnce: false,
@@ -76,6 +79,7 @@ export function RevealYUp({ children }) {
   );
 }
 
+// Componente per rivelare gli elementi con un'animazione dal basso
 export function RevealYDown({ children }) {
   const size = useWindowSize();
   const threshold = size.width <= 768 ? 0.2 : 0.5;
@@ -98,6 +102,7 @@ export function RevealYDown({ children }) {
   );
 }
 
+// Componente per rivelare gli elementi con un'animazione da destra
 export function RevealXRight({ children }) {
   const size = useWindowSize();
   const threshold = size.width <= 768 ? 0.2 : 0.5;
@@ -120,6 +125,7 @@ export function RevealXRight({ children }) {
   );
 }
 
+// Componente per rivelare gli elementi con un'animazione da sinistra
 export function RevealXLeft({ children }) {
   const size = useWindowSize();
   const threshold = size.width <= 768 ? 0.2 : 0.5;

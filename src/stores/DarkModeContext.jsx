@@ -2,6 +2,7 @@ import React, { createContext, useState, useEffect } from 'react';
 
 const DarkModeContext = createContext();
 
+// Provider per il tema scuro
 export function DarkModeProvider({ children }) {
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
 

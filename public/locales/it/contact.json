@@ -14,5 +14,7 @@
   "send": "Invia messaggio",
   "error": "Questo campo è obbligatorio!",
   "invalidEmail": "Inserisci un indirizzo email valido!",
-  "invalidPhone": "Inserisci un numero di telefono valido!"
+  "invalidPhone": "Inserisci un numero di telefono valido!",
+  "emailSent": "Il tuo messaggio è stato inviato con successo!",
+  "emailError": "Si è verificato un errore durante l'invio del messaggio. Riprova più tardi!"
 }

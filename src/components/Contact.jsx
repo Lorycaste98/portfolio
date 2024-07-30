@@ -1,11 +1,15 @@
 import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
-import { RevealYUp, RevealYDown } from './Reveals';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
 
+import { RevealYUp, RevealYDown } from './Reveals';
+
 function Contact() {
+  // Traduzioni
   const { t } = useTranslation('contact');
+
+  // Riferimento al form
   const form = useRef();
 
   const {
@@ -15,15 +19,15 @@ function Contact() {
     reset,
   } = useForm();
 
+  // Invia l'email e mostra degli alert in base al risultato
   const sendEmail = () => {
     emailjs.sendForm('service_rrwffo4', 'template_h6ym29s', form.current, 'BbLOH8Uh0FrFsiM4T').then(
       () => {
-        console.log('SUCCESS!');
-        alert('Messaggio inviato con successo!');
+        alert(t('emailSent'));
         reset(); // Resetta il form dopo l'invio
       },
       (error) => {
-        console.log('FAILED...', error.text);
+        alert(t('emailError'));
       }
     );
   };

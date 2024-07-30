@@ -15,13 +15,19 @@ import DarkModeContext from '../stores/DarkModeContext';
 function Navbar() {
   const [nav, setNav] = useState(false);
   const [hidden, setHidden] = useState(false);
+
+  // Hooks per la gestione dello scroll
   const { scrollY, scrollYProgress } = useScroll();
+
+  // Context per il dark mode
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
+  // Funzione per gestire il click sul bottone del menu mobile
   const handleClick = () => {
     setNav(!nav);
   };
 
+  // Funzione per nascondere la navbar quando si scorre verso il basso
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious();
     if (latest > previous && latest > 150) {
@@ -31,6 +37,7 @@ function Navbar() {
     }
   });
 
+  // Animazione per la barra di progressione
   const progressStyle = useSpring(scrollYProgress, {
     stiffness: 400,
     damping: 90,

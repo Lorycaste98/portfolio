@@ -13,6 +13,7 @@ import homeSectionsData from '../../data/homeSectionsData';
 import socialData from '../../data/socialData';
 
 function MobileMenu({ nav, handleClick, darkMode, toggleDarkMode }) {
+  // Traduzioni
   const { t } = useTranslation('common');
 
   return (

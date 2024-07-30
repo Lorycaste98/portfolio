@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 function ProjectItem({ img, title, languages, linkApp, linkRepo }) {
+  // Traduzioni
   const { t } = useTranslation('projects');
 
   return (

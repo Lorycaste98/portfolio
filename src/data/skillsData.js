@@ -2,23 +2,28 @@ const skillsData = {
   frontEnd: [
     {
       name: 'HTML',
-      level: 'levelIntermediate',
+      level: 'levelAdvanced',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
     },
     {
       name: 'CSS',
-      level: 'levelIntermediate',
+      level: 'levelAdvanced',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
     },
     {
       name: 'JavaScript',
-      level: 'levelIntermediate',
+      level: 'levelAdvanced',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
     },
     {
       name: 'Tailwind',
-      level: 'levelIntermediate',
+      level: 'levelAdvanced',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    },
+    {
+      name: 'React',
+      level: 'levelAdvanced',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
     },
     {
       name: 'TypeScript',
@@ -26,14 +31,14 @@ const skillsData = {
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
     },
     {
-      name: 'React',
-      level: 'levelIntermediate',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
-    },
-    {
       name: 'Angular',
       level: 'levelBeginner',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg',
+    },
+    {
+      name: 'Wordpress',
+      level: 'inProgress',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg',
     },
   ],
   backEnd: [
@@ -53,9 +58,9 @@ const skillsData = {
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
     },
     {
-      name: 'MySQL',
+      name: 'PHP',
       level: 'inProgress',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
     },
   ],
 };

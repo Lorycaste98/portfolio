@@ -1,8 +1,11 @@
 import React from 'react';
+
 import { RiArrowUpWideFill } from 'react-icons/ri';
+
 import socialData from '../data/socialData';
 
 function Footer() {
+  // Funzione per far tornare in cima alla pagina
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

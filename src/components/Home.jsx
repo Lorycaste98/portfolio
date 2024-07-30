@@ -1,15 +1,20 @@
 import React from 'react';
-import { GrSend } from 'react-icons/gr';
 import Slider from 'react-slick';
-import RevealHome from './Reveals';
-import imgData from '../data/imgData';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
+
+import { GrSend } from 'react-icons/gr';
+
+import RevealHome from './Reveals';
 import SocialIcons from './Design/SocialIcons';
 
+import imgData from '../data/imgData';
+
 function Home() {
+  // Traduzioni
   const { t } = useTranslation('home');
 
+  // Impostazioni Slider
   const settings = {
     dots: false,
     infinite: true,

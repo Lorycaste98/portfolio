@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function SkillCategory({ skills, categoryTitle }) {
+  // Traduzioni
   const { t } = useTranslation('skills');
 
   return (

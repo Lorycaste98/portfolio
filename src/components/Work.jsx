@@ -1,11 +1,15 @@
 import React from 'react';
-import works from '../data/workData';
-import WorkItem from './Design/WorkItem';
-import { RevealXRight, RevealYUp } from './Reveals';
 import { useTranslation } from 'react-i18next';
 
+import { RevealXRight, RevealYUp } from './Reveals';
+import WorkItem from './Design/WorkItem';
+
+import works from '../data/workData';
+
 function Work() {
+  // Traduzioni
   const { t } = useTranslation('work');
+
   return (
     <section
       id="work"

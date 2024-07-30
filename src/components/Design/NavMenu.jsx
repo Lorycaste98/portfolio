@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import homeSectionsData from '../../data/homeSectionsData';
 
 function NavMenu() {
+  // Traduzioni
   const { t } = useTranslation('common');
 
   return (

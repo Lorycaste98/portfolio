@@ -8,6 +8,7 @@ import LogoScrittaLight from '../../assets/logos/logo-scritta-blue.webp';
 import LogoScrittaNight from '../../assets/logos/logo-scritta-white.webp';
 
 function Logo({ darkMode }) {
+  // Traduzioni
   const { t } = useTranslation('common');
 
   return (

@@ -1,10 +1,13 @@
 import React from 'react';
-import skillsData from '../data/skillsData';
-import { RevealXRight, RevealYUp, RevealXLeft } from './Reveals';
 import { useTranslation } from 'react-i18next';
+
+import { RevealXRight, RevealYUp, RevealXLeft } from './Reveals';
 import SkillCategory from './Design/SkillCategory';
 
+import skillsData from '../data/skillsData';
+
 function Skills() {
+  // Traduzioni
   const { t } = useTranslation('skills');
 
   return (

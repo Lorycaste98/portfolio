@@ -1,12 +1,16 @@
 import React from 'react';
-import CvIta from '../assets/curriculum-ita.pdf';
-import CvEng from '../assets/curriculum-eng.pdf';
-import { GrDocumentDownload } from 'react-icons/gr';
-import { RevealYUp, RevealYDown } from './Reveals';
-import { FaLongArrowAltDown } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
+import { GrDocumentDownload } from 'react-icons/gr';
+import { FaLongArrowAltDown } from 'react-icons/fa';
+
+import CvIta from '../assets/curriculum-ita.pdf';
+import CvEng from '../assets/curriculum-eng.pdf';
+
+import { RevealYUp, RevealYDown } from './Reveals';
+
 function About() {
+  // Traduzioni
   const { t, i18n } = useTranslation('about');
 
   // Determina quale curriculum scaricare in base alla lingua corrente

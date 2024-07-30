@@ -14,5 +14,7 @@
   "send": "Send message",
   "error": "This field is required!",
   "invalidEmail": "Enter a valid email!",
-  "invalidPhone": "Enter a valid phone number!"
+  "invalidPhone": "Enter a valid phone number!",
+  "emailSent": "Your message has been sent successfully!",
+  "emailError": "An error occurred while sending the message. Try again later!"
 }

@@ -1,14 +1,17 @@
 import React from 'react';
-import ProjectItem from './Design/ProjectItem';
-import projects from '../data/projectsData';
-import { RevealYUp, RevealYDown } from './Reveals';
 import Slider from 'react-slick';
 import { useTranslation } from 'react-i18next';
 
+import { RevealYUp, RevealYDown } from './Reveals';
+import ProjectItem from './Design/ProjectItem';
+
+import projects from '../data/projectsData';
+
 function Projects() {
+  // Traduzioni
   const { t } = useTranslation('projects');
 
-  // Configurazione del carosello
+  // Impostazioni Slider
   const settings = {
     dots: true,
     infinite: true,
@@ -49,22 +52,27 @@ function Projects() {
             </header>
           </RevealYUp>
           <RevealYDown>
-            <div className="w-[70%] md:w-[85%] mx-auto">
-              <Slider {...settings} aria-label={t('projectsSlider')}>
-                {projects.map((project, index) => (
-                  <div key={index} className="px-4">
-                    <ProjectItem
-                      img={project.image}
-                      title={t(project.title)}
-                      languages={project.languages}
-                      linkApp={project.linkApp}
-                      linkRepo={project.linkRepo}
-                      aria-label={t(`${project.title} project`)}
-                    />
-                  </div>
-                ))}
-              </Slider>
-            </div>
+            <article className="max-w-[1100px] w-full dark:text-gray-200">
+              <div className="text-3xl lg:text-4xl font-semibold md:text-center pb-6 italic max-w-[900px] mx-auto">
+                <p>{t('section')}</p>
+              </div>
+              <div className="w-[70%] md:w-[85%] mx-auto">
+                <Slider {...settings} aria-label={t('projectsSlider')}>
+                  {projects.map((project, index) => (
+                    <div key={index} className="px-4">
+                      <ProjectItem
+                        img={project.image}
+                        title={t(project.title)}
+                        languages={project.languages}
+                        linkApp={project.linkApp}
+                        linkRepo={project.linkRepo}
+                        aria-label={t(`${project.title} project`)}
+                      />
+                    </div>
+                  ))}
+                </Slider>
+              </div>
+            </article>
           </RevealYDown>
         </div>
       </div>
