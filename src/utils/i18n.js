@@ -16,7 +16,11 @@ i18n
     ns: ['common', 'home', 'about', 'work', 'projects', 'skills', 'contact'],
     defaultNS: 'common',
     interpolation: {
-      escapeValue: false, // react already safes from xss
+      escapeValue: false,
+    },
+    detection: {
+      order: ['localStorage', 'cookie', 'htmlTag', 'path', 'subdomain'],
+      caches: ['localStorage', 'cookie'],
     },
   });
 
