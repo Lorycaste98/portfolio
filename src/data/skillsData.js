@@ -37,7 +37,7 @@ const skillsData = {
     },
     {
       name: 'Wordpress',
-      level: 'inProgress',
+      level: 'levelBeginner',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg',
     },
   ],
@@ -48,19 +48,24 @@ const skillsData = {
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg',
     },
     {
-      name: 'Firebase',
-      level: 'inProgress',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg',
-    },
-    {
-      name: 'Java',
-      level: 'inProgress',
-      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+      name: 'MongoDB',
+      level: 'levelIntermediate',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg',
     },
     {
       name: 'PHP',
-      level: 'inProgress',
+      level: 'levelBeginner',
       icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg',
+    },
+    {
+      name: 'mySQL',
+      level: 'levelIntermediate',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg',
+    },
+    {
+      name: 'Firebase',
+      level: 'inProgress',
+      icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg',
     },
   ],
 };
