@@ -1,12 +1,13 @@
 {
   "title": "La mia storia",
   "subtitle": "La mia presentazione",
-  "section": "In questa sezione ti racconterò un po' di me.",
-  "parapgraph1": "Cresciuto a Brescia, ho iniziato la mia carriera come geometra, ma la mia passione per la programmazione web mi ha spinto a cambiare strada.",
-  "parapgraph2": "Dopo 6 anni di lavoro come geometra ho deciso di reinventarmi ed ho iniziato il master presso start2impact University, acquisendo competenze in alcuni linguaggi di programmazione come HTML, CSS, JavaScript, React, Angular e NodeJs.",
-  "parapgraph3": "Durante gli anni di esperienza da geometra, ho sviluppato abilità di problem solving, attenzione ai dettagli, capacità di lavorare in team e gestire gruppi di persone. Tuttavia, ho sempre desiderato esplorare il mondo dello sviluppo web.",
-  "parapgraph4": "La mia formazione come Front End Developer mi ha permesso di creare siti web e applicazioni full responsive, ottimizzati per la velocità e accessibili.",
-  "parapgraph5": "Al momento sono alla ricerca del mio primo impiego in questo settore, ma uno dei miei obiettivi è quello di espandere le mie conoscenze nell’ambito del lavoro digitale. Proprio per questo motivo sto studiando il Back End Development e l'UX/UI Design in modo più approfondito rispetto a quanto fatto durante il master in Front End.",
-  "moreInfo": "Se vuoi sapere di più, scarica il mio curriculum!",
+  "section": "In questa sezione ti racconterò un po' di me",
+  "parapgraph1": "Mi chiamo Lorenzo e sono nato e cresciuto a Brescia. Mi considero una persona seria e responsabile, che nella vita di tutti i giorni promuove valori come l'onestà e il rispetto verso gli altri. Inoltre, la mia curiosità, la mia determinazione e la mia capacità di adattarmi facilmente mi permettono di imparare cose nuove tutti i giorni e di perseguire con tenacia e serenità gli obiettivi che mi pongo.",
+  "parapgraph2": "Mi piace stare in compagnia e lavorare in team, ma apprezzo anche i momenti dedicati a me stesso, trovando in entrambi i momenti spazi per la crescita personale. Adoro viaggiare quando possibile, perché credo che esplorare nuove culture e tradizioni arricchisca non solo la mia visione del mondo, ma anche il modo in cui approccio il mio lavoro.",
+  "parapgraph3": "Il mondo del web è sempre stato una mia grande passione, poiché è un mezzo per connettere persone e scoprire nuove prospettive. Da questa passione ho deciso di intraprendere il percorso di formazione di start2impact University con il Master in Front-End Development dopo aver lavorato 6 anni come geometra. In questo corso ho sviluppato diverse competenze in vari linguaggi di programmazione che mi permettono di realizzare siti web e applicazioni completamente responsive, ottimizzati per velocità e accessibilità.",
+  "parapgraph4": "Durante la mia precedente esperienza lavorativa ho sviluppato capacità di problem solving, attenzione ai dettagli e la predisposizione a lavorare in team che mi saranno d’aiuto per la mia nuova avventura.",
+  "parapgraph5": "Al momento sono alla ricerca del mio primo impiego nel settore dello sviluppo web, con l’obiettivo di ampliare le mie competenze, in particolare nel Back End Development che sto già attualmente studiando per avere un profilo da Full Stack Developer.",
+  "moreInfo1": "Se vuoi sapere di più",
+  "moreInfo2": "Scarica il mio CV!",
   "download": "Scaricalo qui!"
 }

@@ -1,12 +1,13 @@
 {
   "title": "About me",
   "subtitle": "My presentation",
-  "section": "In this section I will tell you a little about myself.",
-  "parapgraph1": "Growing up in Brescia, I started my career as a surveyor, but my passion for web programming inspired me to change direction.",
-  "parapgraph2": "After 6 years of working as a surveyor, I decided to reinvent myself and started my master at start2impact University, gaining skills in some programming languages such as HTML, CSS, JavaScript, React, Angular and NodeJs.",
-  "parapgraph3": "During my years as a surveyor, I gained some soft kills like problem solving, attention to detail, the ability to work in teams and manage groups of people. However, I have always wanted to explore the world of web development.",
-  "parapgraph4": "My formation as a Front End Developer has helped me create full responsive, speed-optimized and accessible websites and apps.",
-  "parapgraph5": "I am currently looking for my first job in this field, but one of my goals is to expand my knowledge in the area of digital work. For this reason, I am studying Back End Development and UX/UI Design in more depth than I did during my master in Front End.",
-  "moreInfo": "If you want to know more, download my resume!",
+  "section": "In this section I will tell you a little about myself",
+  "parapgraph1": "My name is Lorenzo and I was born and grew up in Brescia. I consider myself a serious and responsible person, who in everyday life promotes values like honesty and respect for others. In addition, my curiosity, determination and ability to adapt easily allow me to learn new things every day and to pursue with tenacity and serenity the goals I set for myself.",
+  "parapgraph2": "I enjoy being in company and working in a team, but I also appreciate moments dedicated to myself, finding in both moments space for personal growth. I love to travel whenever possible, because I believe that exploring new cultures and traditions enriches not only my worldview, but also the way I approach my work.",
+  "parapgraph3": "The world of the web has always been a great passion of mine because it is a way to connect people and discover new perspectives. From this passion I decided to take the training path of start2impact University with the Master in Front-End Development after working 6 years as a surveyor. In this course I developed several skills in various programming languages that allow me to build fully responsive websites and applications, optimized for speed and accessibility.",
+  "parapgraph4": "During my previous work experience, I developed problem solving skills, attention to detail, and a flair for teamwork that will help me in my new adventure.",
+  "parapgraph5": "I am currently looking for my first job in web development, with the goal of expanding my skills, particularly in Back End Development which I am already currently studying to have a Full Stack Developer profile.",
+  "moreInfo1": "If you want to know more",
+  "moreInfo2": "Download my CV",
   "download": "Download here!"
 }

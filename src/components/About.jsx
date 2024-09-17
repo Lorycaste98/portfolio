@@ -38,29 +38,34 @@ function About() {
                   <p>{t('section')}</p>
                 </div>
 
-                <div className="grid md:grid-cols-2 md:gap-8 text-lg lg:text-xl">
+                <div className="grid md:grid-cols-2 md:gap-8 lg:text-lg">
                   <div className="md:text-right space-y-3">
                     <p>{t('parapgraph1')}</p>
                     <p>{t('parapgraph2')}</p>
-                    <p>{t('parapgraph3')}</p>
                   </div>
                   <div className="md:text-left space-y-3">
+                    <p>{t('parapgraph3')}</p>
                     <p>{t('parapgraph4')}</p>
-                    <p>{t('parapgraph5')}</p>
-                    <p className="flex gap-2">
-                      <FaLongArrowAltDown className="animate-bounce" />
-                      {t('moreInfo')}
-                      <FaLongArrowAltDown className="animate-bounce" />
-                    </p>
-                    <a href={CV} download="">
-                      <button className="text-[#000051] dark:text-white dark:hover:text-[#000051] group border-2 border-[#000051] dark:border-white dark:hover:border-[#ffbb00] my-4 pl-6 pr-4 py-3 flex justify-center items-center lg:text-xl hover:bg-[#ffbb00] hover:border-[#ffbb00] hover:text-[#000051] active:scale-90 active:bg-[#b68f23] active:border-[#b68f23] duration-300 font-semibold rounded-2xl transition-all w-52">
-                        {t('download')}
-                        <span className="ml-2">
-                          <GrDocumentDownload size={18} />
-                        </span>
-                      </button>
-                    </a>
                   </div>
+                </div>
+                <div className="flex flex-col justify-center items-center lg:text-lg space-y-3 my-3 text-center">
+                  <p>{t('parapgraph5')}</p>
+                  <div className="flex items-center space-x-2 text-center">
+                    <FaLongArrowAltDown className="animate-bounce" />
+                    <div>
+                      <p>{t('moreInfo1')}</p>
+                      <p>{t('moreInfo2')}</p>
+                    </div>
+                    <FaLongArrowAltDown className="animate-bounce" />
+                  </div>
+                  <a href={CV} download="">
+                    <button className="text-[#000051] dark:text-white dark:hover:text-[#000051] group border-2 border-[#000051] dark:border-white dark:hover:border-[#ffbb00] pl-6 pr-4 py-2 flex justify-center items-center lg:text-lg hover:bg-[#ffbb00] hover:border-[#ffbb00] hover:text-[#000051] active:scale-90 active:bg-[#b68f23] active:border-[#b68f23] duration-300 font-semibold rounded-2xl transition-all w-52">
+                      {t('download')}
+                      <span className="ml-2">
+                        <GrDocumentDownload size={18} />
+                      </span>
+                    </button>
+                  </a>
                 </div>
               </article>
             </div>
