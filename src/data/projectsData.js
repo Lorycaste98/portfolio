@@ -30,7 +30,7 @@ const projects = [
     title: 'titleProject4',
     languages: ['HTML', 'CSS', 'Javascript'],
     image: CounterImg,
-    linkApp: 'https://lorycaste98.github.io/progetto-html-css/',
+    linkApp: 'https://lorycaste98.github.io/counter-app/',
     linkRepo: 'https://github.com/Lorycaste98/counter-app',
   },
   {
