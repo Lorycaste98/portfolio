@@ -84,6 +84,12 @@ const skillsData = [
     icon: 'https://img.icons8.com/color/48/microsoft-excel-2019--v1.png',
     category: 'other',
   },
+  {
+    name: 'ChatGPT',
+    level: 'levelAdvanced',
+    icon: 'https://img.icons8.com/?size=100&id=FBO05Dys9QCg&format=png&color=000000',
+    category: 'other',
+  },
 ];
 
 export default skillsData;

@@ -19,7 +19,7 @@ function About() {
   return (
     <section
       id="about"
-      className="w-full h-auto md:min-h-screen bg-stone-200 dark:bg-[#000051] py-20 flex items-center transition-colors duration-500"
+      className="w-full h-auto md:min-h-screen bg-stone-200 dark:bg-[#000051] py-20 lg:py-40 flex items-center transition-colors duration-500"
     >
       <div className="flex flex-col justify-center items-center w-full h-full px-5 md:px-16">
         <div className="max-w-[1100px] w-full">

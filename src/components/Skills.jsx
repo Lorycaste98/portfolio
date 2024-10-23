@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { RevealXRight, RevealYUp, RevealXLeft } from './Reveals';
+import { RevealYUp, RevealXLeft } from './Reveals';
 import SkillCategory from './Design/SkillCategory';
 
 import skillsData from '../data/skillsData';
@@ -15,10 +15,17 @@ function Skills() {
   const filteredSkills =
     selectedCategory === 'all' ? skillsData : skillsData.filter((skill) => skill.category === selectedCategory);
 
+  const categories = [
+    { key: 'all', label: t('all') },
+    { key: 'frontend', label: 'Frontend' },
+    { key: 'backend', label: 'Backend' },
+    { key: 'other', label: t('other') },
+  ];
+
   return (
     <section
       id="skills"
-      className="w-full h-auto md:min-h-screen bg-white dark:bg-blue-900 py-20 transition-colors duration-500 flex items-center"
+      className="w-full h-auto md:min-h-screen bg-white dark:bg-blue-900 py-20 lg:py-40 transition-colors duration-500 flex items-center"
     >
       <div className="flex flex-col justify-center items-center w-full h-full px-5 md:px-16">
         <div className="max-w-[1100px] w-full">
@@ -34,38 +41,20 @@ function Skills() {
             <div className="p-6">
               {/* Barra di filtro */}
               <div className="mb-6 flex justify-center">
-                <button
-                  className={`px-4 py-2 rounded ${
-                    selectedCategory === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200'
-                  }`}
-                  onClick={() => setSelectedCategory('all')}
-                >
-                  {t('all')}
-                </button>
-                <button
-                  className={`px-4 py-2 ml-2 rounded ${
-                    selectedCategory === 'frontend' ? 'bg-blue-500 text-white' : 'bg-gray-200'
-                  }`}
-                  onClick={() => setSelectedCategory('frontend')}
-                >
-                  Frontend
-                </button>
-                <button
-                  className={`px-4 py-2 ml-2 rounded ${
-                    selectedCategory === 'backend' ? 'bg-blue-500 text-white' : 'bg-gray-200'
-                  }`}
-                  onClick={() => setSelectedCategory('backend')}
-                >
-                  Backend
-                </button>
-                <button
-                  className={`px-4 py-2 ml-2 rounded ${
-                    selectedCategory === 'altro' ? 'bg-blue-500 text-white' : 'bg-gray-200'
-                  }`}
-                  onClick={() => setSelectedCategory('other')}
-                >
-                  {t('other')}
-                </button>
+                {/* Mappa su tutte le categorie */}
+                {categories.map((category) => (
+                  <button
+                    key={category.key}
+                    className={`px-4 py-1 ml-2 rounded ${
+                      selectedCategory === category.key
+                        ? 'bg-[#000051] dark:bg-gray-200 text-white dark:text-[#000051]'
+                        : 'bg-gray-200 dark:bg-[#000051] text-[#000051] dark:text-white'
+                    }`}
+                    onClick={() => setSelectedCategory(category.key)}
+                  >
+                    {category.label}
+                  </button>
+                ))}
               </div>
 
               {/* Visualizzazione delle competenze filtrate */}
@@ -75,6 +64,19 @@ function Skills() {
               />
             </div>
           </RevealXLeft>
+          {/* Footer per i copyright */}
+          <footer className="mt-12 text-center">
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              Icons by{' '}
+              <a href="https://devicon.dev/" target="_blank" rel="noopener noreferrer" className="underline">
+                Devicon
+              </a>{' '}
+              &{' '}
+              <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer" className="underline">
+                Icons8
+              </a>
+            </p>
+          </footer>
         </div>
       </div>
     </section>

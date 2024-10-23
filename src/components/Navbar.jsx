@@ -27,15 +27,15 @@ function Navbar() {
     setNav(!nav);
   };
 
-  // Funzione per nascondere la navbar quando si scorre verso il basso
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  });
+  // // Funzione per nascondere la navbar quando si scorre verso il basso
+  // useMotionValueEvent(scrollY, 'change', (latest) => {
+  //   const previous = scrollY.getPrevious();
+  //   if (latest > previous && latest > 150) {
+  //     setHidden(true);
+  //   } else {
+  //     setHidden(false);
+  //   }
+  // });
 
   // Animazione per la barra di progressione
   const progressStyle = useSpring(scrollYProgress, {
