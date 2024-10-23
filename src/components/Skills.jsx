@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { RevealXRight, RevealYUp, RevealXLeft } from './Reveals';
@@ -7,8 +7,13 @@ import SkillCategory from './Design/SkillCategory';
 import skillsData from '../data/skillsData';
 
 function Skills() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
   // Traduzioni
   const { t } = useTranslation('skills');
+
+  // Funzione per filtrare le competenze in base alla categoria selezionata
+  const filteredSkills =
+    selectedCategory === 'all' ? skillsData : skillsData.filter((skill) => skill.category === selectedCategory);
 
   return (
     <section
@@ -25,15 +30,51 @@ function Skills() {
               <p className="mt-4 lg:text-xl text-gray-400">{t('subtitle')}</p>
             </header>
           </RevealYUp>
-          <article className="grid grid-cols-1 md:grid-cols-2 gap-6 mx-4">
-            <RevealXLeft>
-              <SkillCategory skills={skillsData.frontEnd} categoryTitle="Front End" />
-            </RevealXLeft>
+          <RevealXLeft>
+            <div className="p-6">
+              {/* Barra di filtro */}
+              <div className="mb-6 flex justify-center">
+                <button
+                  className={`px-4 py-2 rounded ${
+                    selectedCategory === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                  }`}
+                  onClick={() => setSelectedCategory('all')}
+                >
+                  {t('all')}
+                </button>
+                <button
+                  className={`px-4 py-2 ml-2 rounded ${
+                    selectedCategory === 'frontend' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                  }`}
+                  onClick={() => setSelectedCategory('frontend')}
+                >
+                  Frontend
+                </button>
+                <button
+                  className={`px-4 py-2 ml-2 rounded ${
+                    selectedCategory === 'backend' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                  }`}
+                  onClick={() => setSelectedCategory('backend')}
+                >
+                  Backend
+                </button>
+                <button
+                  className={`px-4 py-2 ml-2 rounded ${
+                    selectedCategory === 'altro' ? 'bg-blue-500 text-white' : 'bg-gray-200'
+                  }`}
+                  onClick={() => setSelectedCategory('other')}
+                >
+                  {t('other')}
+                </button>
+              </div>
 
-            <RevealXRight>
-              <SkillCategory skills={skillsData.backEnd} categoryTitle="Back End" />
-            </RevealXRight>
-          </article>
+              {/* Visualizzazione delle competenze filtrate */}
+              <SkillCategory
+                skills={filteredSkills}
+                categoryTitle={t(selectedCategory === 'all' ? 'allSkills' : selectedCategory)}
+              />
+            </div>
+          </RevealXLeft>
         </div>
       </div>
     </section>

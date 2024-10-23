@@ -4,5 +4,7 @@
   "levelBeginner": "Beginner",
   "levelIntermediate": "Intermediate",
   "levelAdvanced": "Advanced",
-  "inProgress": "In progress"
+  "inProgress": "In progress",
+  "all": "All",
+  "other": "Other"
 }

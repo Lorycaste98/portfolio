@@ -2,12 +2,8 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {
-      backgroundImage: {
-        'hero-pattern': "url('./src/assets/profile-photo1.jpg'",
-      },
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')], // plugin per nascondere la barra di scorrimento
   darkMode: 'class',
 };

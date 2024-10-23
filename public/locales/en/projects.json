@@ -1,12 +1,21 @@
 {
   "title": "Projects",
   "subtitle": "My most recent projects",
-  "section": "In this section you will find you the projects I developed during my studies at start2impact University.",
+  "section": "In this section you will find you the projects I developed during my studies.",
   "visiteButton": "Visit site",
   "codeButton": "View code",
   "titleProject1": "Portfolio",
   "titleProject2": "AirEco App ",
   "titleProject3": "Veggie Recipe App",
   "titleProject4": "Counter App",
-  "titleProject5": "First Portfolio"
+  "titleProject5": "Portfolio - 1st Version",
+  "titleProject6": "Landpage Clone",
+  "titleProject7": "Generic Gym Site",
+  "dateProject1": "July 2024",
+  "dateProject2": "June 2024",
+  "dateProject3": "May 2024",
+  "dateProject4": "January 2024",
+  "dateProject5": "December 2023",
+  "dateProject6": "September 2024",
+  "dateProject7": "September 2024"
 }

@@ -13,7 +13,7 @@ function Footer() {
   return (
     <footer className="p-6 bg-gray-700 text-white relative z-50">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-[1240px] mx-auto">
-        <div className="md:text-lg z-50 w-[200px] flex justify-center md:justify-start">
+        <div className="md:text-lg z-50 w-[200px] flex-col justify-center md:justify-start">
           <p>&copy; {new Date().getFullYear()} Lorenzo Castelletti</p>
         </div>
         <div className="relative">

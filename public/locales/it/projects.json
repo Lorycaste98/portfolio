@@ -1,12 +1,21 @@
 {
   "title": "Progetti",
   "subtitle": "I miei progetti più recenti",
-  "section": "In questa sezione ti troverai i progetti che ho sviluppato durante il mio percorso di studi presso start2impact University.",
+  "section": "In questa sezione ti troverai i progetti che ho sviluppato durante il mio percorso.",
   "visiteButton": "Visita sito",
   "codeButton": "Vedi codice",
   "titleProject1": "Portfolio",
   "titleProject2": "App AirEco",
   "titleProject3": "App Ricette Vegetariane",
   "titleProject4": "App Contatore",
-  "titleProject5": "Primo Portfolio"
+  "titleProject5": "Portfolio - 1ª Versione",
+  "titleProject6": "Clone Landpage",
+  "titleProject7": "Sito Palestra Generico",
+  "dateProject1": "Luglio 2024",
+  "dateProject2": "Giugno 2024",
+  "dateProject3": "Maggio 2024",
+  "dateProject4": "Gennaio 2024",
+  "dateProject5": "Dicembre 2023",
+  "dateProject6": "Settembre 2024",
+  "dateProject7": "Settembre 2024"
 }

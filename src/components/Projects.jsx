@@ -13,13 +13,13 @@ function Projects() {
 
   // Impostazioni Slider
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     centerMode: true,
     centerPadding: '0',
     responsive: [
@@ -27,6 +27,14 @@ function Projects() {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 2,
           slidesToScroll: 1,
           arrows: false,
         },
@@ -63,6 +71,7 @@ function Projects() {
                       <ProjectItem
                         img={project.image}
                         title={t(project.title)}
+                        date={t(project.date)}
                         languages={project.languages}
                         linkApp={project.linkApp}
                         linkRepo={project.linkRepo}
