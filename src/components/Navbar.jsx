@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { motion, useMotionValueEvent, useScroll, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
+// import { useMotionValueEvent } from 'framer-motion';
 
 import { FaBars } from 'react-icons/fa';
 import { GoMoon, GoSun } from 'react-icons/go';
@@ -14,10 +15,11 @@ import DarkModeContext from '../stores/DarkModeContext';
 
 function Navbar() {
   const [nav, setNav] = useState(false);
-  const [hidden, setHidden] = useState(false);
+  const [hidden] = useState(false); // rimosso setHidden
 
   // Hooks per la gestione dello scroll
-  const { scrollY, scrollYProgress } = useScroll();
+  // const { scrollY } = useScroll();
+  const { scrollYProgress } = useScroll();
 
   // Context per il dark mode
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
