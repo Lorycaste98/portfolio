@@ -24,19 +24,17 @@ function Projects() {
     centerPadding: '0',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 640,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
         },
       },
       {
-        breakpoint: 1280,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          arrows: false,
         },
       },
     ],
@@ -64,7 +62,7 @@ function Projects() {
               <div className="text-3xl lg:text-4xl font-semibold md:text-center pb-6 italic max-w-[900px] mx-auto">
                 <p>{t('section')}</p>
               </div>
-              <div className="w-[70%] md:w-[85%] mx-auto">
+              <div className="w-[85%] md:w-[90%] mx-auto">
                 <Slider {...settings} aria-label={t('projectsSlider')}>
                   {projects.map((project, index) => (
                     <div key={index} className="px-4">
