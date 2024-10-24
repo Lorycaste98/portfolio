@@ -14,7 +14,7 @@ function ProjectItem({ img, title, date, languages, linkApp, linkRepo }) {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
-      className="group my-4 h-[420px] relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-2 shadow-lg dark:shadow-stone-500"
+      className="group my-4 h-[420px] relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-gray-800 border border-slate-200 dark:border-slate-800 transition-all duration-300 hover:-translate-y-2 shadow-lg dark:shadow-stone-500"
       aria-labelledby={`project-title-${title}`}
     >
       {/* Overlay gradiente sull'immagine al hover */}
