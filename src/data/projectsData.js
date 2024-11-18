@@ -5,21 +5,39 @@ import AirEcoImg from '../assets/projects-images/project4.webp';
 import NewPortfolioImg from '../assets/projects-images/project5.webp';
 import ProvaLandpage from '../assets/projects-images/project6.webp';
 import ProvaPalestra from '../assets/projects-images/project7.webp';
+import Brainwave from '../assets/projects-images/project8.webp';
+import Apple from '../assets/projects-images/project9.webp';
 
 const projects = [
+  {
+    title: 'titleProject9',
+    languages: ['Vite', 'React', 'Tailwind', 'Javascript', 'ThreeJS', 'GSAP'],
+    image: Apple,
+    date: 'dateProject7', // nov 2024
+    linkApp: 'https://phone-clone.lorenzocastelletti.com/',
+    linkRepo: 'https://github.com/Lorycaste98/apple-website',
+  },
+  {
+    title: 'titleProject8',
+    languages: ['Vite', 'React', 'Tailwind', 'Javascript'],
+    image: Brainwave,
+    date: 'dateProject7', // nov 2024
+    linkApp: 'https://brainwave-example.lorenzocastelletti.com/',
+    linkRepo: 'https://github.com/Lorycaste98/brainwave',
+  },
   {
     title: 'titleProject6',
     languages: ['React', 'Tailwind', 'Javascript'],
     image: ProvaLandpage,
     date: 'dateProject6', // set 2024
-    linkApp: '',
+    linkApp: 'https://github.com/Lorycaste98/esercizio-glacom',
     linkRepo: 'https://github.com/Lorycaste98/esercizio-glacom',
   },
   {
     title: 'titleProject7',
     languages: ['React', 'Tailwind', 'TypeScript'],
     image: ProvaPalestra,
-    date: 'dateProject7', // set 2024
+    date: 'dateProject6', // set 2024
     linkApp: 'https://palestra-prova.netlify.app/',
     linkRepo: 'https://github.com/Lorycaste98/modello-palestra',
   },
@@ -55,14 +73,14 @@ const projects = [
     linkApp: 'https://lorycaste98.github.io/counter-app/',
     linkRepo: 'https://github.com/Lorycaste98/counter-app',
   },
-  {
-    title: 'titleProject5',
-    languages: ['HTML', 'CSS'],
-    image: PortfolioImg, // dic 2023
-    date: 'dateProject5',
-    linkApp: 'https://lorycaste98.github.io/progetto-html-css/',
-    linkRepo: 'https://github.com/Lorycaste98/progetto-html-css',
-  },
+  // {
+  //   title: 'titleProject5',
+  //   languages: ['HTML', 'CSS'],
+  //   image: PortfolioImg, // dic 2023
+  //   date: 'dateProject5',
+  //   linkApp: 'https://lorycaste98.github.io/progetto-html-css/',
+  //   linkRepo: 'https://github.com/Lorycaste98/progetto-html-css',
+  // },
 ];
 
 export default projects;
